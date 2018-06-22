@@ -13,8 +13,13 @@ public class DailyTemp extends EntityDetails{
     }
 
     @Override
+    public String getDescription() {
+       return "The day with the smallest temperature spread {dayOfMonth=" + dayOfMonth + ", spread=" + this.getSpread() + "}";
+    }
+    
+    @Override
     public String toString() {
-        return "The day with the smallest temperature spread {" + "dayOfMonth=" + dayOfMonth + ", spread=" + this.getSpread() + '}';
+        return getDescription();
     }
 
 }

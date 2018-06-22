@@ -30,6 +30,10 @@ public class EntityDetails implements Comparable<EntityDetails>{
         this.spread = Math.abs(this.maxValue - this.minValue);
     }
 
+    public String getDescription() {
+        return " ";
+    }
+    
     @Override
     public int compareTo(EntityDetails nEntity) {
         return this.spread - nEntity.spread;

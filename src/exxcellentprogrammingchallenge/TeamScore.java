@@ -13,8 +13,13 @@ public class TeamScore extends EntityDetails{
     }
 
     @Override
+    public String getDescription() {
+        return "Team with the smallest distance{teamName=" + teamName + ", spread=" + this.getSpread() + "}";
+    }
+
+    @Override
     public String toString() {
-        return "Team with the smallest distance{" + "teamName=" + teamName + ", spread=" + this.getSpread() + '}';
+        return getDescription();
     }
 
 }
